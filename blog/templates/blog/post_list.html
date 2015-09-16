@@ -2,12 +2,13 @@
 	{% block content %}
 		<div class="row">
 		{% for post in posts %}
-			<div class="content col-md-4">
+			<div class="content col-md-3">
 				<p>
-					<h4>{{ post.title }}</h4>
-					{{ post.text|linebreaks }}
+					<h4><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h4>
+					{{ post.text|truncatewords:25 }} <br />
 					<span class="published">published: {{ post.published_date }}</span>
 				</p>
 			</div>
 		{% endfor %}
+		</div>
 	{% endblock content %}

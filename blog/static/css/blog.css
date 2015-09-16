@@ -9,9 +9,18 @@ h2 {
 	font-family: 'Ribeye Marrow', serif;
 }
 
-h4 {
+h2 a a:hover {
+	color: #C9D787;
+	font-family: 'Ribeye Marrow', serif;
+}
+
+h4 a {
 	color: #FF8598;
 	font-family: 'Ribeye Marrow', serif;
+}
+
+h4 a:hover {
+	color: #7D8A2E;
 }
 
 body {
