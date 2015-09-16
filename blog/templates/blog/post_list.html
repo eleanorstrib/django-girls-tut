@@ -5,24 +5,13 @@
 		<title>shiny new django site</title>
 	</head>
 	<body>
-		<div class="title">
-			<h2>shiny new django site</h2>
-		</div>
+		<div class="title">shiny new django site</div>
+		{ % for post in posts %}
 		<div class="content">
-			some content
+			<h2><a href="">{{ post.title }}</h2>
+			<p>{{ post.text|linebreaks }}<br/>
+			published: {{ post.published_date }}
 		</div>
-		<div class="content">
-			some more content
-		</div>
-		<div class="content">
-			one last bit of content
-		</div>
-
+		{% end for %}
 	</body>
-	
-
-
-
-
-
 </html>
