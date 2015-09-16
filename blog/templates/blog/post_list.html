@@ -1,22 +1,43 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 
 <html>
 	<head>
-		<title>shiny new django site</title>
+		<title>django ipsums</title>
+		<!--bootstrap-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<!--google fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Ribeye+Marrow|Noto+Sans' rel='stylesheet' type='text/css'>
+		<!--link to blog stylesheet-->
+		<link rel="stylesheet" href="{% static "css/blog.css" %}">
 	</head>
 	<body>
-		<div class="title">
-			<h2>shiny new django site</h2>
-		</div>
+		<nav class="navbar navbar-custom navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<h2>django ipsums</h2>
+				</div>
+			</div>
+		</nav>
+		<div class="row">
 		{% for post in posts %}
-			<div class="content">
+			<div class="content col-md-4">
 				<p>
 					<h4>{{ post.title }}</h4>
 					{{ post.text|linebreaks }}
-					published: {{ post.published_date }}
+					<span class="published">published: {{ post.published_date }}</span>
 				</p>
 			</div>
 		{% endfor %}
-
+		</div>
+		<footer class="footer">
+			<div class="containter">
+				<p>this site was made in September 2015 by <a href="https://github.com/eleanorstrib">eleanor stribling</a></p>
+				<p>built with the <a href="https://www.djangoproject.com/">django</a> web framework and deployed with <a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, following the <a href="http://tutorial.djangogirls.org/">Django Girls tutorial</a>
+				<p>all code available <a href="https://github.com/eleanorstrib/django-girls-tut">here</a></p>
+				<p>text is from <a href="http://meettheipsums.com/">meet the ipsums</a></p>
+			</div>
+		</footer>
 	</body>
 </html>

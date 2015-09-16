@@ -1,0 +1,45 @@
+
+.navbar-custom {
+	background-color: #7D8A2E;
+
+}
+
+h2 {
+	color: #C9D787;
+	font-family: 'Ribeye Marrow', serif;
+}
+
+h4 {
+	color: #FF8598;
+	font-family: 'Ribeye Marrow', serif;
+}
+
+body {
+	padding-top: 70px;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.content {
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+}
+
+.published {
+	color: #C9D787;
+}
+
+footer {
+	background-color: #FF8598;
+	color: #FFFFFF;
+	padding: 1em;
+	text-align: right;
+}
+
+footer a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+footer a {
+	color: #C9D787;
+}
